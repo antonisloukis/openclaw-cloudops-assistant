@@ -136,6 +136,23 @@ The final output can be converted into a reusable SRE runbook for future inciden
 - AWS
 - SRE Practices
 
+## Project Structure
+
+```text
+openclaw-cloudops-assistant/
+│
+├── agent/
+│   ├── workflows/          # AI agent troubleshooting workflows
+│   └── knowledge/          # Cloud and SRE knowledge sources
+│
+├── docs/
+│   ├── examples/           # Example incidents and outputs
+│   └── guides/             # Troubleshooting documentation
+│
+├── README.md               # Project documentation
+└── LICENSE                 # MIT License
+```
+
 ## Future Improvements
 
 - Add AWS API integrations
