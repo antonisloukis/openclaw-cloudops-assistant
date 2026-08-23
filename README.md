@@ -74,6 +74,58 @@ Assistant workflow:
           & Runbook Generation
 ```
 
+## Example Workflow
+
+### Incident: Kubernetes Pod CrashLoopBackOff
+
+**User Request**
+
+```
+My application pod keeps restarting. Help me investigate.
+```
+
+**OpenClaw Agent Workflow**
+
+1. **Collect Context**
+   - Identify affected service
+   - Gather Kubernetes resources
+   - Review recent changes
+
+2. **Analyze Evidence**
+   - Inspect pod logs
+   - Check Kubernetes events
+   - Review container status
+   - Validate configuration
+
+3. **Identify Possible Causes**
+
+Common causes:
+- Application crash
+- Invalid environment variables
+- Missing secrets
+- Resource limits
+- Dependency failures
+
+4. **Generate Response**
+
+The assistant provides:
+
+- Root cause analysis
+- Investigation commands
+- Recommended fixes
+- Incident resolution steps
+
+Example commands:
+
+```bash
+kubectl logs <pod-name>
+kubectl describe pod <pod-name>
+kubectl get events
+```
+
+5. **Create Runbook**
+
+The final output can be converted into a reusable SRE runbook for future incidents.
  
 ## Technologies
 
