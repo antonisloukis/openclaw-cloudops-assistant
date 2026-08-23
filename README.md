@@ -153,6 +153,50 @@ openclaw-cloudops-assistant/
 └── LICENSE                 # MIT License
 ```
 
+## Example Output
+
+### Incident Investigation
+
+**Input**
+
+```
+My Kubernetes application is crashing repeatedly.
+The pod status shows CrashLoopBackOff.
+```
+
+**Assistant Response**
+
+```
+Incident: Kubernetes Pod Failure
+
+Severity: Medium
+
+Possible Causes:
+- Application startup failure
+- Missing environment variables
+- Invalid secrets configuration
+- Dependency unavailable
+
+Investigation Steps:
+
+1. Check container logs:
+kubectl logs <pod-name>
+
+2. Inspect pod events:
+kubectl describe pod <pod-name>
+
+3. Review recent deployments:
+kubectl rollout history deployment/<name>
+
+Recommended Actions:
+- Validate application configuration
+- Confirm required secrets exist
+- Check dependency health
+
+Generated Runbook:
+Follow Kubernetes pod recovery procedure.
+```
+
 ## Future Improvements
 
 - Add AWS API integrations
