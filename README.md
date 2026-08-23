@@ -42,16 +42,37 @@ Assistant workflow:
 
 ## Architecture
 
-User
- |
- v
-OpenClaw Agent
- |
- +---- Knowledge Base
- |
- +---- Troubleshooting Workflows
- |
- +---- Cloud Operations Guides
+```text
+                    User
+                      |
+                      v
+          +-----------------------+
+          |   OpenClaw AI Agent   |
+          +-----------------------+
+                      |
+        +-------------+-------------+
+        |                           |
+        v                           v
++---------------+          +--------------------+
+| Knowledge Base|          | Troubleshooting    |
+|               |          | Workflows          |
+| - AWS guides  |          | - Incident checks  |
+| - Kubernetes  |          | - Log analysis     |
+| - SRE methods |          | - Runbook steps    |
++---------------+          +--------------------+
+        |                           |
+        +-------------+-------------+
+                      |
+                      v
+          +-----------------------+
+          | Cloud Operations      |
+          | Recommendations       |
+          +-----------------------+
+                      |
+                      v
+          Incident Resolution
+          & Runbook Generation
+```
 
  
 ## Technologies
