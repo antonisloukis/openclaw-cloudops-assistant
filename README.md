@@ -1,8 +1,8 @@
 # OpenClaw CloudOps Assistant
 
-AI-powered SRE assistant designed to help engineers troubleshoot cloud incidents, analyze logs, and generate operational runbooks.
+A small documentation repository showcasing my participation in the OpenClaw Challenge in Dev community.
 
-Built for the OpenClaw Challenge.
+AI-powered SRE assistant designed to help engineers troubleshoot cloud incidents, analyze logs, and generate operational runbooks.
 
 ## Overview
 
